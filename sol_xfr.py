@@ -204,7 +204,6 @@ def send_sol(
 #<=====>#
 
 
-# Not Working Yet
 def send_tkn(
 	src_addr, 
 	src_key, 
