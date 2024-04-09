@@ -143,7 +143,9 @@ def send_sol(
 		print('')
 		WoM(func_str)
 
-	client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30, blockhash_cache=True)
+	# blockhash_cache was removed in solana.py 0.33
+	# client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30, blockhash_cache=True)
+	client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30)
 	src_keypair               = Keypair.from_base58_string(src_key)
 	src_pubkey                = Pubkey(base58.b58decode(src_addr))
 	src_bal                   = client.get_balance(src_pubkey).value / LAMPORTS
@@ -231,7 +233,9 @@ def send_tkn(
 			return 'FAIL'
 
 		# building client
-		client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30, blockhash_cache=True)
+		# blockhash_cache was removed in solana.py 0.33
+		# client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30, blockhash_cache=True)
+		client                    = Client(rpc_url, commitment=Commitment("confirmed"), timeout=30)
 		# token pubkey
 		tkn_pubkey                = Pubkey(base58.b58decode(tkn_addr))
 		# source wallet pubkey & keypair
