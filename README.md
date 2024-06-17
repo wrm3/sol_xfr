@@ -1,4 +1,4 @@
-# sol_xfr - Python Example Code for Transfer Solana by Amount & SPL Tokens by Amount or ALL with priority fees to help overcome the recent network congestion
+# sol_xfr - Python 3.12.1, solana 0.34.0, solders 0.21.0 Example Code for Transfer Solana by Amount & SPL Tokens by Amount or ALL with priority fees to help overcome the recent network congestion
 Solana &amp; Token Transfer For Python
 
 **Features**
